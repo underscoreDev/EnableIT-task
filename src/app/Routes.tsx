@@ -1,15 +1,12 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import { Route, Routes } from "react-router-dom";
-import { PageLoader } from "app/modules/common/page-loader";
-
-const LandingModule = React.lazy(() => import("app/modules/landing-module"));
-const NoMatch = React.lazy(() => import("app/modules/common/no-match-page"));
+const LandingModule = React.lazy(() => import("app/pages/landing-module"));
+import CircularProgress from "@mui/material/CircularProgress";
 
 export const FallbackModule = () => (
-  <Box css={"width: 100%;height: calc(100vh - 350px - 144px)"}>
-    <PageLoader />
-  </Box>
+  <div style={{ width: "100%", height: "100vw" }}>
+    <CircularProgress />
+  </div>
 );
 
 export const MainRoutes = () => (
@@ -28,7 +25,7 @@ export const MainRoutes = () => (
         path="*"
         element={
           <React.Suspense fallback={<FallbackModule />}>
-            <NoMatch />
+            <h1>Page not found</h1>
           </React.Suspense>
         }
       />

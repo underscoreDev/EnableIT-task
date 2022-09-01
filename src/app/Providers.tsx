@@ -1,18 +1,19 @@
 // cc:application base#;application providers
-import Box from "@mui/material/Box";
+import "app/sass/main.scss";
 import React, { ReactNode } from "react";
-import { GlobalStyles } from "app/theme/globalStyles";
 import { BrowserRouter as Router } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 interface ProviderProps {
   children?: ReactNode;
 }
 
+const queryClient = new QueryClient();
+
 const Providers = (props: ProviderProps) => (
-  <Box>
-    <GlobalStyles />
+  <QueryClientProvider client={queryClient}>
     <Router>{props.children}</Router>
-  </Box>
+  </QueryClientProvider>
 );
 
 export default Providers;

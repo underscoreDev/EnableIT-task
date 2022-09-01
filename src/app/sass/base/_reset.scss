@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 57%;
+  }
+  @include respond(tab-port) {
+    font-size: 51%;
+  }
+  @include respond(phone) {
+    font-size: 46%;
+  }
+  @include respond(small-phone) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background: #e5e5e5;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background: #6061e5;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7fd 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6061e5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

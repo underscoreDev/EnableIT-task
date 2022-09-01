@@ -1,3 +1,0 @@
-/cypress/*.ts
-"**/cypress/*.ts"
-"**/cypress/*cy.ts"

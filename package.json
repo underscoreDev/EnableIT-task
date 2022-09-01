@@ -1,5 +1,5 @@
 {
-  "name": "React project starter template",
+  "name": "EnableIT",
   "version": "0.1.0",
   "private": false,
   "repository": {
@@ -7,55 +7,32 @@
     "url": "https://github.com/underscoreDev/react-starter-templete.git"
   },
   "dependencies": {
-    "@craco/craco": "^6.4.3",
-    "@hot-loader/react-dom": "^17.0.1",
-    "@jackwilsdon/craco-use-babelrc": "^1.0.0",
+    "@babel/helper-plugin-utils": "^7.18.9",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.8",
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
-    "craco-plugin-react-hot-reload": "^0.1.0",
-    "easy-peasy": "^5.0.4",
+    "@mui/material": "^5.10.3",
+    "axios": "^0.27.2",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-query": "^3.39.2",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
-    "react-use": "^17.3.2",
-    "styled-components": "^5.3.3",
-    "web-vitals": "^2.1.3"
+    "react-scripts": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
-    "@types/react-html-parser": "^2.0.2",
     "@types/react-router-dom": "^5.3.2",
-    "@types/react-router-hash-link": "^2.4.5",
-    "@types/styled-components": "^5.1.19",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "babel-plugin-macros": "^3.1.0",
-    "babel-plugin-react-data-testid": "^0.2.0",
-    "babel-plugin-styled-components": "^2.0.2",
-    "cypress": "^10.3.0",
-    "eslint": "^8.19.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.5.1",
-    "typescript": "^4.5.4",
-    "typescript-plugin-styled-components": "^2.0.0"
-  },
-  "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
+    "typescript": "^4.5.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "cypress open",
-    "prettier": "prettier --config .prettierrc \"cypress/**/*.ts\" --write"
+    "prettier": "prettier --config .prettierrc \"**/*.ts\" --write"
   },
   "browserslist": {
     "production": [
@@ -68,11 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "eslintIgnore": [
-    "*.cy.ts",
-    "*.spec.ts",
-    "*.test.ts",
-    "*.config.ts"
-  ]
+  }
 }
