@@ -1,16 +1,45 @@
 .landing {
   height: 90vh;
-  width: 80%;
+  width: 85%;
   border-radius: 0.6rem;
   @include absCenter;
   background: radial-gradient($Color-Orange, $Color-Off-White, $Color-Orange);
   backdrop-filter: blur(200px);
 }
 
-.table {
+.tableContainer {
   background-color: $Color-Background;
   height: 95%;
   width: 95%;
   border-radius: 0.6rem;
   @include absCenter;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 30rem);
+    margin-bottom: 3rem;
+
+    &--header {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #979ca8;
+    }
+
+    &--body {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
+  }
 }
