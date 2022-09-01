@@ -23,19 +23,6 @@ body {
   background: #f4f5f8;
 }
 
-body::-webkit-scrollbar {
-  width: 7px;
-  background: #6061e5;
-}
-
-body::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #ffffff 0%, #f2f7fd 100%);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #6061e5;
-}
-
 a {
   text-decoration: none;
 }

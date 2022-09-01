@@ -7,9 +7,9 @@
   padding-left: 5rem;
 
   img {
-    width: 25rem;
-    height: 5rem;
-    margin: 1rem 0;
+    width: 20rem;
+    height: 3.5rem;
+    margin: 2rem;
   }
 }
 
@@ -20,25 +20,17 @@
   position: relative;
   border-radius: 1rem;
   @include absCenter;
-  box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px #acafc605;
-  // overflow: scroll;
+  overflow: scroll;
   padding: 3rem;
+  box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px #acafc605;
 
   &::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: #f5f5f5;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: $Color-Orange;
-    border-radius: 3px;
-    border: 3px solid $Color-Orange;
+    width: 1rem;
   }
 }
 
 .main {
-  padding-left: 5rem;
+  padding-left: 7rem;
 }
 
 .table {
@@ -89,29 +81,4 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-
-  button {
-    outline: none;
-    border: none;
-    background-color: #fff7e6;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1rem;
-    color: #ff9900;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.5rem;
-    letter-spacing: 0.02em;
-    border-radius: 2rem;
-    margin-right: 3rem;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px #acafc605;
-    &:focus,
-    &:active {
-      box-shadow: none;
-    }
-  }
 }
