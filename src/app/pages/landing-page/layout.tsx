@@ -15,7 +15,7 @@ const users = new Users();
 export const LandingLayout = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { isLoading, data, isError, isFetching } = useQuery(["Users", page], () => users.giveMeUsers(page), {
+  const { isLoading, data, isError, isFetching, error} = useQuery(["Users", page], () => users.giveMeUsers(page), {
 
 refetchOnWindowFocus: false,
   });
@@ -27,7 +27,7 @@ refetchOnWindowFocus: false,
 
         <div className="tableContainer">
           {isError ? (
-            <p>Error Can't get Users</p>
+            <p>Error Can't get Users. {JSON.stringify(error)}</p>
           ) : (
             <div className="main">
               <table className="table" aria-label="users table">
