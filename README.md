@@ -1,33 +1,40 @@
-# React-Typescript Starter
+# EnableIT Task
 
-## What is the React-Typescript Starter template?
+## What is the EnableIT?
 
-React Stater Template is a project template made with Typescript, Styled-components, Redux/Easy-peasy for state-management, Cypress for testing, Material-UI, Absolute imports and other react components
+EnableIT Frontend Task made with Typescript, SASS, React Query and Axios for data fetching, Material-UI-icons, Absolute imports and other react components
 
 ## About the project
 
-- Author: <a href="https://www.godswill.tech/" target="_blank">Godswill Edet</a>
+- Author: <a href="https://github.com/underscoreDev/" target="_blank">Godswill Edet</a>
 
-## Installing
-
-### Manual installation
+## Contribution Guide
 
 | Name | Recommended version |
 | ---- | ------------------- |
 | Node | 16.13               |
 | Yarn | latest              |
 
-#### Install dependencies
+1. Clone the Repo
 
-From the root folder:
+```bash
 
-`yarn install`
+ git clone https://github.com/underscoreDev/EnableIT-task.git
 
-#### Run the app
+```
+
+2. Install dependencies
+
+```bash
+npm install
+
+```
+
+#### Run the app server
 
 For development:
 
-`yarn start`
+`npm run start`
 
 App should be running on <http://localhost:3000>
 
@@ -35,17 +42,9 @@ App should be running on <http://localhost:3000>
 
 For production build:
 
-`yarn build`
+`npm run build`
 
 Build files should be in `build`
-
-#### E2E Tests
-
-Run e2e tests: `yarn cy:open`
-
-App should be running on <http://localhost:3000>
-
----
 
 ## Methodologies
 
@@ -59,44 +58,16 @@ Behavior Driven Development (BDD) is an Agile process designed to keep focus on 
 
 ## Core
 
-### react
+### React with Typescript
 
 A JavaScript library for building declarative component-based user interfaces
 
-### Redux / (Easy-peasy)
+### Data fetching
 
-Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test
+I made use of React Query and Axios for data fetching
 
 ## Styling
 
-### styled components
-
-styled-components utilises tagged template literals to style your components. It removes the mapping between components and styles. This means that when you're defining your styles, you're actually creating a normal React component, that has your styles attached to it. Here we use the css prop from styled-components
-e.g
-`
-In your style.ts file
-
-import { css } from "styled-components/macro;
-
-export const navbarCss=css`width:100%; height:4rem; background-color:red;`
-
-Then in your main react component file
-import the style name and apply
-
-import { navbarCss } from "./style.ts"
-
-<nav css={navbarCss}> I am a navbar </nav>
-
-`
-
-## Code quality
-
-### eslint
-
-## Testing
-
-### cypress
-
-Cypress is a next generation front end testing tool built for the modern web.
+I made use of SASS for styling along with the 7-1 CSS Architecture and BEM class naming convention
 
 ## Absolute Import paths
