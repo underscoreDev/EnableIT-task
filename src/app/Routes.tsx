@@ -4,7 +4,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 const LandingPage = React.lazy(() => import("app/pages/landing-page"));
 
 export const FallbackPage = () => (
-  <div style={{ width: "100%", height: "100vw", left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}>
+  <div className="loading-spinner">
     <CircularProgress sx={{ color: "#ffdaa1" }} />
   </div>
 );

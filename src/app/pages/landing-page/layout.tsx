@@ -1,14 +1,14 @@
 import Users from "app/utils/api";
 import { useQuery } from "react-query";
 import React, { useState } from "react";
+import WorkIcon from "@mui/icons-material/Work";
+import BadgeIcon from "@mui/icons-material/Badge";
+import BusinessIcon from "@mui/icons-material/Business";
 import CircularProgress from "@mui/material/CircularProgress";
 import TableBody from "app/pages/landing-page/components/table";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import WorkIcon from "@mui/icons-material/Work";
-import BusinessIcon from "@mui/icons-material/Business";
-import BadgeIcon from "@mui/icons-material/Badge";
 
 const users = new Users();
 
@@ -49,7 +49,9 @@ export const LandingLayout = () => {
                 </tr>
 
                 {isLoading || isFetching ? (
-                  <CircularProgress sx={{ color: "#ffdaa1" }} />
+                  <div className="loading-spinner">
+                    <CircularProgress sx={{ color: "#ffdaa1" }} />
+                  </div>
                 ) : (
                   <TableBody users={data?.data.users} />
                 )}
