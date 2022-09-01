@@ -6,6 +6,9 @@ import TableBody from "app/pages/landing-page/components/table";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import WorkIcon from "@mui/icons-material/Work";
+import BusinessIcon from "@mui/icons-material/Business";
+import BadgeIcon from "@mui/icons-material/Badge";
 
 const users = new Users();
 
@@ -29,9 +32,17 @@ export const LandingLayout = () => {
             <div className="main">
               <table className="table" aria-label="users table">
                 <tr className="table__row">
-                  <th className="table__row--header">User Name</th>
-                  <th className="table__row--header">Company</th>
-                  <th className="table__row--header">Job Title</th>
+                  <th className="table__row--header">
+                    <BadgeIcon /> Name
+                  </th>
+                  <th className="table__row--header">
+                    {" "}
+                    <BusinessIcon /> Company
+                  </th>
+                  <th className="table__row--header">
+                    {" "}
+                    <WorkIcon /> Job Title
+                  </th>
                   <th className="table__row--header">
                     <PhoneEnabledIcon /> Phone Number
                   </th>
