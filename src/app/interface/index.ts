@@ -6,3 +6,7 @@ export interface UserTableProps {
   Email: string;
   FirstNameLastName: string;
 }
+
+export interface TableProps {
+  users: UserTableProps[];
+}

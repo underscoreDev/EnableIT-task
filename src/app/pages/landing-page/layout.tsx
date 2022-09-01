@@ -1,18 +1,21 @@
 import Users from "app/utils/api";
 import { useQuery } from "react-query";
 import React, { useState } from "react";
-import TableBody from "app/pages/landing-page/components/table";
 import CircularProgress from "@mui/material/CircularProgress";
+import TableBody from "app/pages/landing-page/components/table";
+import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
 const users = new Users();
 
 export const LandingLayout = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { isLoading, data, isError, isFetching } = useQuery(["users", page], () => users.giveMeUsers(page));
+  const { isLoading, data, isError, isFetching } = useQuery(["users", page], () => users.giveMeUsers(page), {
+    staleTime: 30000,
+    refetchOnWindowFocus: false,
+  });
 
   return (
     <React.Fragment>
