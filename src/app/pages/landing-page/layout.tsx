@@ -1,9 +1,12 @@
 import Users from "app/utils/api";
 import { useQuery } from "react-query";
 import React, { useState } from "react";
+import { UserTableProps } from "app/interface/UserTable";
+import Table from "app/pages/landing-page/components/table";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const users = new Users();
+
 export const LandingLayout = () => {
   const [page, setPage] = useState<number>(0);
 
@@ -23,13 +26,10 @@ export const LandingLayout = () => {
                 prev
               </button>
               <button onClick={() => setPage(page + 1)}>next</button>
-              {data?.data.users.map((user: any) => (
+
+              {data?.data.users.slice(0, 10).map((user: UserTableProps) => (
                 <div key={user.ID}>
-                  {/* <h1>{user.JobTitle}</h1>
-                  <h1>{user.Phone}</h1>
-                <h1>{user.Company}</h1> */}
-                  {/* <h1>{user.Email}</h1> */}
-                  <h1>{user.FirstNameLastName}</h1>
+                  <Table {...user} />
                 </div>
               ))}
             </div>

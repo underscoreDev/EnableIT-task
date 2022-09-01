@@ -1,16 +1,16 @@
 .landing {
   height: 90vh;
   width: 80%;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   @include absCenter;
-  background: radial-gradient(#ffdaa1, #ffffff33, #ffdaa1);
-  backdrop-filter: blur(100px);
+  background: radial-gradient($Color-Orange, $Color-Off-White, $Color-Orange);
+  backdrop-filter: blur(200px);
 }
 
 .table {
-  background-color: #f2f2f2;
+  background-color: $Color-Background;
   height: 95%;
   width: 95%;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   @include absCenter;
 }
