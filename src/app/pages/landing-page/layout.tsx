@@ -17,7 +17,7 @@ export const LandingLayout = () => {
 
   const { isLoading, data, isError, isFetching, error} = useQuery(["Users", page], () => users.giveMeUsers(page), {
 
-refetchOnWindowFocus: false,
+// refetchOnWindowFocus: false,
   });
 
   return (
