@@ -51,7 +51,9 @@ export const LandingLayout = () => {
                 </thead>
 
                 {isLoading || isFetching ? (
-                  <CircularProgress sx={{ color: "#ffdaa1" }} />
+                  <div className="loading-spinner">
+                    <CircularProgress sx={{ color: "#ffdaa1" }} />
+                  </div>
                 ) : (
                   <TableBody users={data?.data.users} />
                 )}
