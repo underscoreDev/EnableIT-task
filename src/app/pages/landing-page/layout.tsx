@@ -15,12 +15,10 @@ const users = new Users();
 export const LandingLayout = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { isLoading, data, isError, isFetching, error } = useQuery(["users", page], () => users.giveMeUsers(page), {
+  const { isLoading, data, isError, isFetching } = useQuery(["users", page], () => users.giveMeUsers(page), {
     staleTime: 30000,
     refetchOnWindowFocus: false,
   });
-
-  console.log(error);
 
   return (
     <React.Fragment>
@@ -29,7 +27,7 @@ export const LandingLayout = () => {
 
         <div className="tableContainer">
           {isError ? (
-            <p>Error Can't get Users. {JSON.stringify(error)}</p>
+            <p>Error Can't get Users.</p>
           ) : (
             <div className="main">
               <table className="table" aria-label="users table">

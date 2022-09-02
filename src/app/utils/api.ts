@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError, AxiosPromise } from "axios";
+import axios from "axios";
 
 const http = axios.create({
   baseURL: `https://give-me-users-forever.herokuapp.com/api/users`,
