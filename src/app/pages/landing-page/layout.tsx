@@ -29,7 +29,7 @@ export const LandingLayout = () => {
 
         <div className="tableContainer">
           {isError ? (
-            <p>Error Can't get Users</p>
+            <p>Error Can't get Users. {JSON.stringify(error)}</p>
           ) : (
             <div className="main">
               <table className="table" aria-label="users table">
