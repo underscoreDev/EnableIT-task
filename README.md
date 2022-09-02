@@ -26,6 +26,7 @@ EnableIT Frontend Task made with Typescript, SASS, React Query and Axios for dat
 2. Install dependencies
 
 ```bash
+
 npm install
 
 ```
@@ -34,7 +35,11 @@ npm install
 
 For development:
 
-`npm run start`
+```bash
+
+npm run start
+
+```
 
 App should be running on <http://localhost:3000>
 
@@ -42,7 +47,10 @@ App should be running on <http://localhost:3000>
 
 For production build:
 
-`npm run build`
+```bash
+npm run build
+
+```
 
 Build files should be in `build`
 

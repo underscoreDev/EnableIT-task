@@ -15,10 +15,12 @@ const users = new Users();
 export const LandingLayout = () => {
   const [page, setPage] = useState<number>(0);
 
-  const { isLoading, data, isError, isFetching } = useQuery(["users", page], () => users.giveMeUsers(page), {
+  const { isLoading, data, isError, isFetching, error } = useQuery(["users", page], () => users.giveMeUsers(page), {
     staleTime: 30000,
     refetchOnWindowFocus: false,
   });
+
+  console.log(error);
 
   return (
     <React.Fragment>
@@ -31,27 +33,27 @@ export const LandingLayout = () => {
           ) : (
             <div className="main">
               <table className="table" aria-label="users table">
-                <tr className="table__row">
-                  <th className="table__row--header">
-                    <BadgeIcon /> Name
-                  </th>
-                  <th className="table__row--header">
-                    {" "}
-                    <BusinessIcon /> Company
-                  </th>
-                  <th className="table__row--header">
-                    {" "}
-                    <WorkIcon /> Job Title
-                  </th>
-                  <th className="table__row--header">
-                    <PhoneEnabledIcon /> Phone Number
-                  </th>
-                </tr>
+                <thead>
+                  <tr className="table__row">
+                    <th className="table__row--header">
+                      <BadgeIcon /> Name
+                    </th>
+                    <th className="table__row--header">
+                      {" "}
+                      <BusinessIcon /> Company
+                    </th>
+                    <th className="table__row--header">
+                      {" "}
+                      <WorkIcon /> Job Title
+                    </th>
+                    <th className="table__row--header">
+                      <PhoneEnabledIcon /> Phone Number
+                    </th>
+                  </tr>
+                </thead>
 
                 {isLoading || isFetching ? (
-                  <div className="loading-spinner">
-                    <CircularProgress sx={{ color: "#ffdaa1" }} />
-                  </div>
+                  <CircularProgress sx={{ color: "#ffdaa1" }} />
                 ) : (
                   <TableBody users={data?.data.users} />
                 )}
