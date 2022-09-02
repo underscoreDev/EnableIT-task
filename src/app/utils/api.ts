@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, AxiosError, AxiosPromise } from "axios";
 
 const http = axios.create({
-  baseURL: `http://give-me-users-forever.herokuapp.com/api/users`,
+  baseURL: `https://give-me-users-forever.herokuapp.com/api/users`,
   headers: {
     "Content-type": "application/json",
   },
